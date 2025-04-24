@@ -3,8 +3,8 @@ import styles from "./Ranking.module.css";
 function Ranking({ arr, heading, typename }) {
   
   return (
-    <div className={`${styles.container}`}>
-      <h2> {heading} </h2>
+    <div id={`${typename}`} className={`${styles.container}`}>
+      <h2 className={`${styles.heading}`}> {heading} </h2>
       <div className={`${styles.subcontainer}`}>
         {arr.map((item, index) => (
           <div key={item.id_name}>

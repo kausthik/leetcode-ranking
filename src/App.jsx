@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Ranking from "./components/Ranking";
 import Hero_background from "./components/Hero_background";
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 function App() {
   const [maxQuestions, setMaxQuestions] = useState([]);
@@ -12,7 +15,9 @@ function App() {
     "ROUSHAN_RAJ_17",
     "Harshit_Srivastava_25",
     "Harshal-03",
-    "Arun_kumar7310"
+    "Arun_kumar7310",
+    "AyushKumar98",
+    "coder_bhumikaa"
   ];
 
   useEffect(() => {
@@ -52,7 +57,7 @@ function App() {
     <>
       <Navbar />
       <Hero_background />
-      <Ranking heading={"Highest Questions Solved"} arr={maxQuestions} typename={"TotalSolved"} />
+      <Ranking heading={"Total Questions Ranking"} arr={maxQuestions} typename={"TotalSolved"} />
       <Ranking heading={"Leetcode Ranking"} arr={maxQuestions} typename={"Ranking"}/>
       <Ranking heading={"Hard Questions Ranking"} arr={maxQuestions} typename={"HardSolved"}/>
       <Ranking heading={"Medium Questions Ranking"} arr={maxQuestions} typename={"MediumSolved"}/>

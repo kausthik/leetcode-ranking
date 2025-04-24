@@ -2,10 +2,15 @@
   display: flex;
   justify-content: space-around;
   margin-top: 16px;
+  font-family: sans-serif;
+  height: 40px;
+  align-items: center;
+  background-color: #dfe3e6;
 }
 
 .anchor{
   text-decoration: none;
-  color: rgb(5, 5, 5);
   font-weight: 700;
+  font-size: large;
+  color: rgb(71, 68, 69);
 }
