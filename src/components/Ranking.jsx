@@ -7,7 +7,7 @@ function Ranking({ arr, heading, typename }) {
       <h2 className={`${styles.heading}`}> {heading} </h2>
       <div className={`${styles.subcontainer}`}>
         {arr.map((item, index) => (
-          <div key={item.id_name}>
+          <div key={item.id_name} className={`${styles.card}`}>
             <div className={`${styles.image}`}>
               <img
                 src={`/photos/${item.id_name}.jpeg`}
@@ -16,9 +16,9 @@ function Ranking({ arr, heading, typename }) {
               />
             </div>
             <div>
-              <p>{item.id_name}</p>
-              <p>Questions Solved :- {item[typename]}</p>
-              <p>Rank {index + 1}</p>
+              <p className={`${styles.cardDetails}`}>{item.id_name}</p>
+              <p className={`${styles.cardDetails}`}>Questions Solved :- {item[typename]}</p>
+              <p className={`${styles.cardDetails}`}>Rank {index + 1}</p>
             </div>
           </div>
         ))}
