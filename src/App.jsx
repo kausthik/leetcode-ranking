@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Ranking from "./components/Ranking";
 import Hero_background from "./components/Hero_background";
+import Footer_Com from "./components/Footer_Com";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
 function App() {
-  const [maxQuestions, setMaxQuestions] = useState([]);
+  const [arr, setarr] = useState([]);
   const userNameArr = [
     "kk_gangwar",
     "krotrn",
@@ -32,7 +33,6 @@ function App() {
             return {
               id_name: name,
               TotalSolved: data.totalSolved,
-              Ranking:data.ranking,
               MediumSolved:data.mediumSolved,
               HardSolved : data.hardSolved,
               EasySolved : data.easySolved
@@ -40,11 +40,7 @@ function App() {
           })
         );
 
-        // Sort the results before setting the state
-        const sortedResults = results.sort(
-          (a, b) => b.TotalSolved - a.TotalSolved
-        );
-        setMaxQuestions(sortedResults);
+        setarr(results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -54,15 +50,15 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div>
       <Navbar />
       <Hero_background />
-      <Ranking heading={"Total Questions Ranking"} arr={maxQuestions} typename={"TotalSolved"} />
-      <Ranking heading={"Leetcode Ranking"} arr={maxQuestions} typename={"Ranking"}/>
-      <Ranking heading={"Hard Questions Ranking"} arr={maxQuestions} typename={"HardSolved"}/>
-      <Ranking heading={"Medium Questions Ranking"} arr={maxQuestions} typename={"MediumSolved"}/>
-      <Ranking heading={"Easy Questions Ranking"} arr={maxQuestions} typename={"EasySolved"}/>
-    </>
+      <Ranking heading={"Total Questions Ranking"} arr={arr} typename={"TotalSolved"} />
+      <Ranking heading={"Hard Questions Ranking"} arr={arr} typename={"HardSolved"}/>
+      <Ranking heading={"Medium Questions Ranking"} arr={arr} typename={"MediumSolved"}/>
+      <Ranking heading={"Easy Questions Ranking"} arr={arr} typename={"EasySolved"}/>
+      <Footer_Com />
+      </div>
   );
 }
 
