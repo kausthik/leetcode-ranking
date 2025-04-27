@@ -14,7 +14,8 @@ function Ranking({ arr, heading, typename }) {
           <div key={item.id_name} className={`${styles.card}`}>
             <div className={`${styles.image}`}>
               <img
-                src={`/photos/${item.id_name}.jpeg`}
+               src={`/photos/${item.id_name}.jpeg`}
+               onError={(e) => { e.target.src = `/photos/default.jpeg` }}
                 alt="image"
                 className={`${styles.img}`}
               />
