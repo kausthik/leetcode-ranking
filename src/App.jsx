@@ -18,7 +18,8 @@ function App() {
     "Harshal-03",
     "Arun_kumar7310",
     "AyushKumar98",
-    "coder_bhumikaa"
+    "coder_bhumikaa",
+    "ao55sdaK9Q"
   ];
 
   useEffect(() => {
@@ -35,13 +36,15 @@ function App() {
               TotalSolved: data.totalSolved,
               MediumSolved:data.mediumSolved,
               HardSolved : data.hardSolved,
-              EasySolved : data.easySolved
+              EasySolved : data.easySolved,
+              Ratings : 3.5*data.mediumSolved+data.easySolved+10*data.hardSolved
             };
           })
         );
 
         setarr(results);
-      } catch (error) {
+      } 
+      catch (error) {
         console.error("Error fetching data:", error);
       }
     };
@@ -53,10 +56,11 @@ function App() {
     <div>
       <Navbar />
       <Hero_background />
-      <Ranking heading={"Total Questions Ranking"} arr={arr} typename={"TotalSolved"} />
-      <Ranking heading={"Hard Questions Ranking"} arr={arr} typename={"HardSolved"}/>
-      <Ranking heading={"Medium Questions Ranking"} arr={arr} typename={"MediumSolved"}/>
-      <Ranking heading={"Easy Questions Ranking"} arr={arr} typename={"EasySolved"}/>
+      <Ranking heading={"Our Ratings"} arr={arr} typename={"Ratings"} variable={"Ratings"}/>
+      <Ranking heading={"Total Questions Ranking"} arr={arr} typename={"TotalSolved"} variable={"Questions Solved"} />
+      <Ranking heading={"Hard Questions Ranking"} arr={arr} typename={"HardSolved"} variable={"Questions Solved"}/>
+      <Ranking heading={"Medium Questions Ranking"} arr={arr} typename={"MediumSolved"} variable={"Questions Solved"}/>
+      <Ranking heading={"Easy Questions Ranking"} arr={arr} typename={"EasySolved"} variable={"Questions Solved"}/>
       <Footer_Com />
       </div>
   );

@@ -1,6 +1,6 @@
 import styles from "./Ranking.module.css";
 
-function Ranking({ arr, heading, typename }) {
+function Ranking({ arr, heading, typename , variable }) {
   
   const sortedArr = [...arr]
   .sort((a, b) => b[typename] - a[typename]) 
@@ -23,7 +23,7 @@ function Ranking({ arr, heading, typename }) {
             <div>
               <p className={`${styles.cardDetails}`}>{item.id_name}</p>
               <p className={`${styles.cardDetails}`}>
-                Questions Solved :- {item[typename]}
+               {variable} :- {item[typename]}
               </p>
               <p className={`${styles.cardDetails}`}>Rank {index + 1}</p>
             </div>
