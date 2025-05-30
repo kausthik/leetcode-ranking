@@ -19,7 +19,8 @@ function App() {
     "Arun_kumar7310",
     "AyushKumar98",
     "coder_bhumikaa",
-    "ao55sdaK9Q"
+    "ao55sdaK9Q",
+    "Rishikesh2005"
   ];
 
   useEffect(() => {
