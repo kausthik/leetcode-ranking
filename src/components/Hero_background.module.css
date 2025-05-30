@@ -1,6 +1,6 @@
 .div{
   height: 240px;
-  background-image: url('/photos/hero_background.jpeg');
+  background-image: url('/hero_background.jpeg');
   width: 100%;
   object-fit: fill;
   display: flex;
