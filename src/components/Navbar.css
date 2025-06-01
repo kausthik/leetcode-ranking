@@ -14,3 +14,9 @@
   font-size: large;
   color: rgb(71, 68, 69);
 }
+
+@media (max-width : 600px){
+  header{
+    display: none;
+  }
+}

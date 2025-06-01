@@ -1,10 +1,10 @@
-import styles from './Hero_background.module.css'
+import './Hero_background.css'
 
 function Hero_background(){
     return(
-      <div className={`${styles.div}`}>
-        <p className={`${styles.p1}`}>top leetcode rankings</p>
-        <p className={`${styles.p2}`}>Measure today, Master tomorrow</p>
+      <div className='hero-background-container'>
+        <p className='title'>top leetcode rankings</p>
+        <p className='tag-line'>Measure today, Master tomorrow</p>
       </div>
     )
 }

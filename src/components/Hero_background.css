@@ -1,7 +1,7 @@
-.div{
-  height: 240px;
+.hero-background-container{
+  height: 18vw;
+  width: 100vw;
   background-image: url('/hero_background.jpeg');
-  width: 100%;
   object-fit: fill;
   display: flex;
   flex-direction: column;
@@ -12,14 +12,14 @@
 }
 
 
-.p1{
+.title{
    color: rgb(74, 69, 69);
    font-family: sans-serif;
    font-weight: 1000;
-   font-size: 50px;
+   font-size: 5vw;
    text-transform: capitalize;
 }
 
-.p2{
-  font-size: 20px;
+.tag-line{
+  font-size: 2vw;
 }
