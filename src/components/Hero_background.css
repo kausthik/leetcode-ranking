@@ -23,3 +23,23 @@
 .tag-line{
   font-size: 2vw;
 }
+
+
+@media (max-width: 600px) {
+   .title{
+    font-size: 8vw;
+   }
+   .tag-line{
+    font-size: 4vw;
+   }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+     .title{
+    font-size: 8vw;
+   }
+   .tag-line{
+    font-size: 4vw;
+   }
+}

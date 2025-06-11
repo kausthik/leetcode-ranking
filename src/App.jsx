@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+      {false && <Navbar />}
       <Hero_background />
       <Ranking heading={"Our Ratings"} arr={arr} typename={"Ratings"} variable={"Ratings"}/>
       <Ranking heading={"Total Questions Ranking"} arr={arr} typename={"TotalSolved"} variable={"Questions Solved"} />

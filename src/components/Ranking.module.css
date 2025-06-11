@@ -48,8 +48,20 @@ box-shadow:  22px 22px 45px #a8a7a7,
    color: rgb(83, 84, 82);
    text-transform: capitalize;
    font-weight: 800;
-   font-size: 4vw;
+   font-size: 3vw;
    padding: 8px;
    display: flex;
    justify-content: center;
+}
+
+@media (max-width : 600px){
+  .heading{
+    font-size: 7vw;
+  }
+}
+
+@media (min-width : 601px) and (max-width : 1024px){
+  .heading{
+    font-size: 4vw;
+  }
 }
