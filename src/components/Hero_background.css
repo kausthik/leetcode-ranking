@@ -26,6 +26,9 @@
 
 
 @media (max-width: 600px) {
+   .hero-background-container{
+  height: 160px;
+}
    .title{
     font-size: 8vw;
    }
@@ -36,6 +39,11 @@
 
 
 @media (min-width: 601px) and (max-width: 1024px) {
+    
+   .hero-background-container{
+  height: 200px;
+}
+
      .title{
     font-size: 8vw;
    }
