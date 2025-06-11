@@ -20,12 +20,12 @@ function Ranking({ arr, heading, typename , variable }) {
                 className={`${styles.img}`}
               />
             </div>
-            <div>
-              <p className={`${styles.cardDetails}`}>{item.id_name}</p>
-              <p className={`${styles.cardDetails}`}>
+            <div className={`${styles.cardDetails}`}>
+              <p >{item.id_name}</p>
+              <p >
                {variable} :- {item[typename]}
               </p>
-              <p className={`${styles.cardDetails}`}>Rank {index + 1}</p>
+              <p>Rank {index + 1}</p>
             </div>
           </div>
         ))}

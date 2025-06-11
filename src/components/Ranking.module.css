@@ -2,7 +2,6 @@
   margin-top: 16px;
   font-family: sans-serif;
   color: rgb(4, 9, 113);
-
 }
 
 .subcontainer{
@@ -17,7 +16,7 @@
 
 
 .card {
-  border-radius: 50px;
+border-radius: 50px;
 background: #e0e0e0;
 box-shadow:  22px 22px 45px #a8a7a7,
              -22px -22px 45px #ffffff;
@@ -37,7 +36,10 @@ box-shadow:  22px 22px 45px #a8a7a7,
 }
 
 .cardDetails{
+  margin-top: 10px;
+  height: 120px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -55,13 +57,36 @@ box-shadow:  22px 22px 45px #a8a7a7,
 }
 
 @media (max-width : 600px){
+
+  .cardDetails{
+  margin-top: 10px;
+  height: 100px;
+}
+
+  .image{
+  height: 180px;
+  width: 180px;
+}
+
   .heading{
     font-size: 7vw;
   }
 }
 
 @media (min-width : 601px) and (max-width : 1024px){
+
+  .cardDetails{
+  margin-top: 10px;
+  height: 120px;
+}
+
+.image{
+  height: 220px;
+  width: 220px;
+}
+
   .heading{
     font-size: 4vw;
   }
+
 }
